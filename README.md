@@ -1,10 +1,12 @@
 # Code Review Checklist for React/Next.js
 
 ## Component Structure & Size
- Keep components small and focused.
+- Code Formatting: Is the code properly formatted? (Consider using tools like Prettier.)
+
+- Keep components small and focused.
 🔸 If the file exceeds 200–300 lines, break it down into child components.
 🔸 JSX Markup <= 50 Lines
-Large JSX blocks reduce readability. Split into smaller reusable components or extracted JSX elements.<br>✅
+- Large JSX blocks reduce readability. Split into smaller reusable components or extracted JSX elements.<br>✅
 
 
 ### Code Quality & Readability

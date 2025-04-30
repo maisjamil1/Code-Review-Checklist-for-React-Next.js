@@ -15,7 +15,23 @@ Large JSX blocks reduce readability. Split into smaller reusable components or e
 🔸Avoid creating functions that are not essential. Focus on what is really necessary, keeping the code simple and direct.
 
 - No unused props are passed to components.
-- Meaningful variable and function names:
+- Use Consistent Naming Conventions
+Naming conventions improve readability and help the team (and tools like linters) understand your code structure at a glance.
+
+PascalCase: Use for React components, interfaces, and type aliases
+
+```
+const UserCard = () => { ... }
+
+interface AdminUser { ... }
+
+type TaskList = { ... }
+```
+camelCase: Use for variables, functions, arrays, and objects
+```
+const fetchData = () => { ... }
+const userList = [ ... ]
+```
 Variables = nouns (user, formData)
 Functions = verbs (fetchUsers, handleSubmit)
 
@@ -88,3 +104,6 @@ Review its bundle impact using bundlephobia.
 
 -  Use lazy loading and dynamic imports for large or optional components.
 ✅ const Chart = dynamic(() => import('./Chart'), { ssr: false })
+
+- Comment only where necessary
+  

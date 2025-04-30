@@ -10,9 +10,9 @@
 
 
 ### Code Quality & Readability
+- KISS: Keep It Simple & Stupid (Keep the codes simple and understandable)
 - Follow the DRY (Don’t Repeat Yourself) principle.
 🔸 Extract repeating logic or components.
-
 - Follow YAGNI (You Aren’t Gonna Need It)
 🔸Avoid creating functions that are not essential. Focus on what is really necessary, keeping the code simple and direct.
 

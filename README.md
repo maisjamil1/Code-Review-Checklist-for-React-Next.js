@@ -106,4 +106,75 @@ Review its bundle impact using bundlephobia.
 ✅ const Chart = dynamic(() => import('./Chart'), { ssr: false })
 
 - Comment only where necessary
-  
+
+### Simplify State Management with useReducer
+Avoid cluttering components with multiple useState calls. If you’re managing more than 3–4 related state variables or complex objects, switch to useReducer for better organization and readability.
+
+Before:
+
+```
+const [isLoading, setIsLoading] = useState(false);
+const [error, setError] = useState(null);
+const [data, setData] = useState([]);
+```
+
+After:
+
+```
+const initialState = { isLoading: false, error: null, data: [] };
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'SET_LOADING': return { ...state, isLoading: true };
+    case 'SET_DATA': return { ...state, data: action.payload, isLoading: false };
+    case 'SET_ERROR': return { ...state, error: action.payload, isLoading: false };
+    default: return state;
+  }
+}
+```
+const [state, dispatch] = useReducer(reducer, initialState);
+📌 Tip: Prefer useReducer for complex, interrelated state or when state transitions depend on previous state.
+
+🔌 Boolean Props: Use Shorthand
+Instead of:
+```
+<MyComponent isActive={true} />
+```
+Use:
+
+```
+<MyComponent isActive />
+```
+🧼 String Props: Avoid Unnecessary Curly Braces
+Instead of:
+
+```
+<Title text={"Hello"} />
+```
+Use:
+
+```
+<Title text="Hello" />
+```
+🔄 Use Fragments Over Divs for Wrapping
+When a wrapper element is needed but no actual HTML element is required, use fragments (<>...</>) to avoid unnecessary DOM nodes.
+
+Good:
+```
+<>
+  <h1>Welcome</h1>
+  <p>Intro text</p>
+</>
+```
+📭 Use Self-Closing Tags When There Are No Children
+If a component or HTML tag has no children, write it as a self-closing tag:
+
+Instead of:
+```
+<Avatar></Avatar>
+```
+Use:
+
+```
+<Avatar />
+```

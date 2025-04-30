@@ -9,12 +9,19 @@
 - Large JSX blocks reduce readability. Split into smaller reusable components or extracted JSX elements.<br>✅
 
 
-### Code Quality & Readability
-- KISS: Keep It Simple & Stupid (Keep the codes simple and understandable)
-- Follow the DRY (Don’t Repeat Yourself) principle.
-🔸 Extract repeating logic or components.
-- Follow YAGNI (You Aren’t Gonna Need It)
-🔸Avoid creating functions that are not essential. Focus on what is really necessary, keeping the code simple and direct.
+### Core Principles of Clean React Code
+- Single Responsibility Principle (SRP)
+Each component should do one thing well.
+- Separation of Concerns
+Separate logic from presentation: business logic → hooks/utils; JSX → components.
+- DRY — Don’t Repeat Yourself
+Extract reusable logic into custom hooks, helpers, or shared components.
+- KISS — Keep It Simple, Stupid
+Avoid premature abstractions or overly complex solutions.
+- YAGNI — You Aren't Gonna Need It
+Don’t add features or complexity until they are needed.
+Avoid creating functions that are not essential. Focus on what is really necessary, keeping the code simple and direct.
+
 
 - No unused props are passed to components.
 - Use Consistent Naming Conventions

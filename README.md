@@ -7,6 +7,7 @@
 ### Code Quality & Readability
 - Follow the DRY (Don’t Repeat Yourself) principle.
 🔸 Extract repeating logic or components.
+
 - Follow YAGNI (You Aren’t Gonna Need It)
 🔸Avoid creating functions that are not essential. Focus on what is really necessary, keeping the code simple and direct.
 
@@ -21,3 +22,25 @@ Functions = verbs (fetchUsers, handleSubmit)
 
  Group similar values under enums.
 ✅ enum Status { Active = 'active', Inactive = 'inactive' }
+
+### Type Safety
+ Use well-named interfaces and types.
+✅ interface UserProfile { name: string; age: number; }
+
+ Extend types/interfaces to avoid duplication.
+✅ interface AdminUser extends UserProfile { role: string }
+
+ Avoid "any" type .
+
+ ### Best Practices
+ Remove all console.log() before merging.
+❌ console.log('Debug user')
+
+ Use async/await or Promises, and handle errors.
+✅ try { await fetchData() } catch (err) { handleError(err) }
+
+ Use Promise.all when calling APIs in parallel.
+✅ const [user, posts] = await Promise.all([getUser(), getPosts()])
+
+ Add id or data-id for testability and automation.
+✅ <button data-id="submit-btn">Submit</button>

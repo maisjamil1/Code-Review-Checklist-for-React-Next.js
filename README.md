@@ -25,7 +25,12 @@ Avoid creating functions that are not essential. Focus on what is really necessa
 - avoid  nested conditionals or deeply nested JSX.
 - No unused props are passed to components.
 - Remove unused/unreachable code & Remove commented out code.
-- Use Consistent Naming Conventions
+- Check for missing form validations or incorrect form validations. I’ve never seen React apps that have a form without field validation.
+- Be aware of missing error handlers from API responses to provide appropriate feedback to users. Pay attention to try/catch blocks and their handling in catch.
+- Optimize async methods. Decide whether async methods can run in parallel or need to execute in sequence, making sure that required data is properly awaited.
+
+
+- Use Consistent Naming Conventions.
 Naming conventions improve readability and help the team (and tools like linters) understand your code structure at a glance.
 
 PascalCase: Use for React components, interfaces, and type aliases

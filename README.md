@@ -107,7 +107,7 @@ Review its bundle impact using bundlephobia.
 -  Use lazy loading and dynamic imports for large or optional components.
 ✅ const Chart = dynamic(() => import('./Chart'), { ssr: false })
 
-- Comment only where necessary
+- Comment only where necessary ( Necessary comments are comments that describe the why.)
 
 ### Simplify State Management with useReducer
 Avoid cluttering components with multiple useState calls. If you’re managing more than 3–4 related state variables or complex objects, switch to useReducer for better organization and readability.

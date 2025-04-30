@@ -44,3 +44,45 @@ Functions = verbs (fetchUsers, handleSubmit)
 
  Add id or data-id for testability and automation.
 ✅ <button data-id="submit-btn">Submit</button>
+
+
+###  React Specifics
+ Fix React warnings in the console.
+❌ Each child in a list should have a unique "key" prop.
+✅ <li key={user.id}>{user.name}</li>
+
+ Use custom hooks to abstract logic.
+✅ useAuth(), usePagination()
+
+ Extract common functions into reusable helpers.
+✅ formatDate(), capitalizeFirstLetter()
+
+ Prefer generic functions if logic is reusable.
+✅ function paginate<T>(data: T[], page: number): T[] {}
+
+ Avoid dangerouslySetInnerHTML unless sanitized.
+✅ Use DOMPurify.sanitize(html) before injecting.
+
+ If using timers (setInterval/setTimeout), clean them up.
+✅
+
+ts
+Copy
+Edit
+useEffect(() => {
+  const interval = setInterval(fetchData, 10000);
+  return () => clearInterval(interval);
+}, []);
+
+- Use next/image for images and always provide alt attributes.
+✅ <Image src="/logo.png" alt="Company logo" />
+
+### Performance & Bundle Optimization
+ - If a new library is added:
+
+Check if a smaller alternative exists.
+
+Review its bundle impact using bundlephobia.
+
+-  Use lazy loading and dynamic imports for large or optional components.
+✅ const Chart = dynamic(() => import('./Chart'), { ssr: false })

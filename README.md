@@ -16,11 +16,10 @@ Large JSX blocks reduce readability. Split into smaller reusable components or e
 
 - No unused props are passed to components.
 - Meaningful variable and function names:
-
 Variables = nouns (user, formData)
-
 Functions = verbs (fetchUsers, handleSubmit)
--  Avoid hardcoded values, use named constants.
+
+-  Avoid hardcoded values,Avoid magic strings/numbers. Define them once at the top of file or in a shared constants file..
 ❌ if (status === 1) → ✅ if (status === STATUS.ACTIVE)
 
  Group similar values under enums.

@@ -3,6 +3,9 @@
 ## Component Structure & Size
  Keep components small and focused.
 🔸 If the file exceeds 200–300 lines, break it down into child components.
+🔸 JSX Markup <= 50 Lines
+Large JSX blocks reduce readability. Split into smaller reusable components or extracted JSX elements.<br>✅
+
 
 ### Code Quality & Readability
 - Follow the DRY (Don’t Repeat Yourself) principle.

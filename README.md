@@ -24,6 +24,7 @@ Avoid creating functions that are not essential. Focus on what is really necessa
 
 - avoid  nested conditionals or deeply nested JSX.
 - No unused props are passed to components.
+- Remove unused/unreachable code & Remove commented out code.
 - Use Consistent Naming Conventions
 Naming conventions improve readability and help the team (and tools like linters) understand your code structure at a glance.
 

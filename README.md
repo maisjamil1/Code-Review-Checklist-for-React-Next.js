@@ -22,7 +22,7 @@ Avoid premature abstractions or overly complex solutions.
 Don’t add features or complexity until they are needed.
 Avoid creating functions that are not essential. Focus on what is really necessary, keeping the code simple and direct.
 
-
+- avoid  nested conditionals or deeply nested JSX.
 - No unused props are passed to components.
 - Use Consistent Naming Conventions
 Naming conventions improve readability and help the team (and tools like linters) understand your code structure at a glance.
